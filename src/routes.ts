@@ -1,9 +1,11 @@
 import { Router } from 'express';
 
+import { CreateTodoController } from './controllers/CreateTodoController';
+
 const router = Router();
 
-router.get('/todo', (req, res) => {
-  res.send('Hello World!');
-});
+const createTodoController = new CreateTodoController();
+
+router.post('/todos', createTodoController.handle);
 
 export { router };
