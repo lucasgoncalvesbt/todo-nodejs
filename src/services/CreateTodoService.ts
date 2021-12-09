@@ -1,3 +1,7 @@
+import { getCustomRepository } from 'typeorm';
+
+import { TodoRepository } from '../repositories/TodoRepository';
+
 interface ITodoRequest {
   name: string;
   content: string;
@@ -6,7 +10,17 @@ interface ITodoRequest {
 
 class CreateTodoService {
   async execute({ name, content, authorName }: ITodoRequest) {
-    console.log({ name, content, authorName });
+    const todoRepository = getCustomRepository(TodoRepository);
+
+    const todo = todoRepository.create({
+      name,
+      content,
+      authorName,
+    });
+
+    await todoRepository.save(todo);
+
+    return todo;
   }
 }
 

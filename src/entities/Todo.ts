@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 @Entity('todos')
 export class Todo {
   @PrimaryColumn()
-  id: string;
+  id?: string;
 
   @Column()
   name: string;
@@ -16,7 +16,7 @@ export class Todo {
   authorName: string;
 
   @CreateDateColumn()
-  created_At: Date;
+  created_at?: Date;
 
   constructor() {
     if (!this.id) {
