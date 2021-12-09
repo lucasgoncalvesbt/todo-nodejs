@@ -1,16 +1,16 @@
 version: "3.9"
 
 services:
-  database_ignite:
+  database_todo:
     image: postgres
     container_name: todo_database
     restart: always
     ports:
-      - "5432:5432"
+      - "5444:5432"
     environment:
       - POSTGRES_USER=mobicare
       - POSTGRES_PASSWORD=mobicare
-      - POSTGRES_DB=mobi_todo
+      - POSTGRES_DB=mobicare
     volumes:
       - pgdata:/data/postgres
   # app:
