@@ -1,10 +1,10 @@
 {
   "type": "postgres",
   "host": "localhost",
-  "port": 5433,
+  "port": 5444,
   "username": "mobicare",
   "password": "mobicare",
-  "database": "todo_database",
+  "database": "mobicare",
   "migrations": [
     "./src/database/migrations/*.ts"
   ],
