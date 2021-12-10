@@ -9,6 +9,11 @@
 - Através dos endpoints é possivel:
   - Registrar, Excluir, Atualizar um Todo
   - Listar Todos
+
+<br>
+
+# 📒 Documentação
+Você pode acessar a documentação da API no endereço http://localhost:3333/api-docs/
   
 <br>
 
@@ -25,6 +30,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   - [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/getting-started/install) ( Para rodar os scripts de execução do projeto e instalação dos pacotes)
   - [VSCode](https://code.visualstudio.com/) ( Opcional - editor de código para você trabalhar com o código )
   - [Docker](https://www.docker.com/products/docker-desktop) (Orquestrador de containers, na aplicação é utilizado para subir um banco de dados sem precisas de muitas configurações)
+  - [Insomnia](https://www.insomnia.rest/) ou [Postman](https://www.postman.com/downloads/) (Aplicações para testar a API) 
 <br>
 
 ## Agora execute os seguintes comandos:
