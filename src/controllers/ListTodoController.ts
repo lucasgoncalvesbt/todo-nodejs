@@ -1,8 +1,13 @@
 import { Request, Response } from 'express';
 
+import { ListTodoService } from '../services/ListTodoService';
+
 class ListTodoController {
   async handle(req: Request, res: Response) {
-    return res.json({ message: 'List Todo' });
+    const listTodoService = new ListTodoService();
+
+    const todos = await listTodoService.execute();
+    return res.json(todos);
   }
 }
 
