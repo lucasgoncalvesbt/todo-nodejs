@@ -13,11 +13,15 @@ class CreateTodoService {
   async execute({ name, content, authorName }: ITodoRequest) {
     const todoRepository = getCustomRepository(TodoRepository);
 
-    if (name.trim().length === 0 || name === null) {
+    if (name === undefined || name === null || name.trim().length === 0) {
       throw new AppError('Name is required', 400);
     }
 
-    if (authorName.trim().length === 0 || authorName === null) {
+    if (
+      authorName === undefined ||
+      authorName === null ||
+      authorName.trim().length === 0
+    ) {
       throw new AppError('Author name is required', 400);
     }
 
